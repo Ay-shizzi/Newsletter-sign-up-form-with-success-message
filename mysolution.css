@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root{
+    ---Tomato: hsl(4, 100%, 67%);
+    ---Dark-Slate-Grey: hsl(234, 29%, 20%);
+    ---Charcoal-Grey: hsl(235, 18%, 26%);
+    ---Grey: hsl(231, 7%, 60%);
+    ---White: hsl(0, 0%, 100%);
+    ---Font-size: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(---Dark-Slate-Grey);
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+#Sign-up{
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    background-color: var(---White);
+    width: 600px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.information{
+    padding: 30px;
+}
+.information h1{
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+ul{
+    margin: 15px 0;
+}
+li{
+    list-style: none;
+    line-height: 2;
+}
+.icon-list{
+    height: 12px;
+    margin-right: 7px;
+}
+.labels{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+}
+#error-message{
+    color: var(---Tomato);
+    display: none;
+}
+#input_field{
+    width: 100%;
+    border: 1px solid var(---Grey);
+    border-radius: 5px;
+    outline: none;
+    padding: 8px 10px;
+    margin: 8px 0 15px;
+}
+#btn_sign-up{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: var(---Dark-Slate-Grey);
+    color: var(---White);
+    padding: 12px 10px;
+    margin-bottom: 15px;
+    font-size: 10px;
+    cursor: pointer;
+}
+#btn_sign-up:hover{
+    background-color: var(---Tomato);
+    box-shadow: 0px 7px 10px 5px hsla(4, 100%, 67%, 0.3);
+}
+.illustration{
+    background: url(./assets/images/illustration-sign-up-desktop.svg) no-repeat center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+/* Success message start */
+
+#Success{
+    display: none;
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+}
+.icon-success{
+    height: 30px;
+    margin-bottom: 30px;
+}
+#Success h1{
+    font-size: 32px;
+}
+#Success p{
+    margin: 20px 0;
+    font-size: 11px;
+    line-height: 1.4;
+}
+span{
+    font-weight: bold;
+}
+#btn_Success{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 12px;
+    background-color: var(---Dark-Slate-Grey);
+    color: var(---White);
+    font-size: 10px;
+    cursor: pointer;
+}
+#btn_Success:hover{
+    background-color: var(---Tomato);
+    box-shadow: 0px 7px 10px 5px hsla(4, 100%, 67%, 0.3);
+}
+
+/* mobile-screen */
+
+@media screen and (max-width: 620px){
+    #Sign-up{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1.5fr;
+        width: 350px;
+    }
+    .information{
+        order: 2;
+    }
+    #Success{
+        height: 80vh; 
+    }
+    .icon-success{
+        height: 60px;
+    }
+    #Success h1{
+        font-size: 38px;
+    }
+    #Success p{
+        font-size: 15px;
+    }
+    #btn_Success{
+        margin-top: 200px;
+    }
+}
